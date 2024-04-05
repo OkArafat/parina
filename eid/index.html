@@ -10,7 +10,16 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            color: #333;
+            color: #ede7e7c8;
+            font-size: 20px;
+        }
+        audio {
+            /* display: none; */
+            /* position: fixed;
+            bottom: -100px;
+            left: -100px;
+            opacity: 0; */
+            
         }
         .container {
             text-align: center;
@@ -131,7 +140,7 @@
             display: block;
             overflow: hidden;
             position: relative;
-            animation-duration: 3s;
+            animation-duration: 5s;
             animation-fill-mode: forwards;
             animation-delay: 1s;
         }
@@ -228,6 +237,9 @@
     </style>
 </head>
 <body>
+    
+ 
+    
     <div class="container-outer">
         <div class="container">
             <div class="main-text">
@@ -250,9 +262,10 @@
     <div class="container">
         <div class="media-container">
             <!-- <img class="mosque-img" src="https://static.vecteezy.com/system/resources/previews/023/125/316/non_2x/a-mosque-with-a-moon-and-stars-in-the-background-generative-ai-free-photo.jpg" alt="Mosque"> -->
-            <video autoplay loop muted  >
+            <video autoplay loop muted>
                 <source src="eidMubarak.mp4" type="video/mp4">
             </video>
+            
         </div>
         <h1>Eid Mubarak!</h1>
         <p id="greeting"></p>
@@ -261,7 +274,7 @@
             <div id="nameForm">
                 <label for="name">Enter your name:</label>
                 <input type="text" id="name" required>
-                <button onclick="wishEid()" >Submit</button>
+                <button onclick="wishEid()">Submit</button>
             </div>
         </div>
         <div id="wish" style="display: none;">
@@ -274,7 +287,13 @@
         <p>Developer: Ok Arafat</p>
     </div>
 
+    <audio controls autoplay loop>
+        <source src="eidMubarak.mp3" type="audio/mp3">
+        <source src="eidMubarak.ogg" type="audio/ogg">
+       
+    </audio>
     <script>
+        
         function wishEid() {
             var name = document.getElementById("name").value;
             if (name.trim() === "") {
