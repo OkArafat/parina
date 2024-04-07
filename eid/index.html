@@ -262,8 +262,9 @@
     <div class="container">
         <div class="media-container">
             <!-- <img class="mosque-img" src="https://static.vecteezy.com/system/resources/previews/023/125/316/non_2x/a-mosque-with-a-moon-and-stars-in-the-background-generative-ai-free-photo.jpg" alt="Mosque"> -->
-            <video autoplay loop muted>
+            <video id="autoplay"  loop controls autoplay >
                 <source src="eidMubarak.mp4" type="video/mp4">
+                <source src="eidMubarak.ogg" type="video/ogg">
             </video>
             
         </div>
@@ -287,13 +288,15 @@
         <p>Developer: Ok Arafat</p>
     </div>
 
-    <audio controls autoplay loop>
+    <!-- <audio controls autoplay loop>
         <source src="eidMubarak.mp3" type="audio/mp3">
         <source src="eidMubarak.ogg" type="audio/ogg">
        
-    </audio>
+    </audio> -->
     <script>
-        
+        let vid = document.getElementById("autoplay");
+        vid.autoplay = true;
+        vid.load();
         function wishEid() {
             var name = document.getElementById("name").value;
             if (name.trim() === "") {
